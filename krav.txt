@@ -1,14 +1,8 @@
 För att uppnå Godkänt är kraven att:
 
-Utöver dessa två knappar så ska en lista av 12 bilder på katter synas direkt, som har hämtats från URL:en som är beskriven ovan. Det är dokumenterat på https://docs.thecatapi.com/pagination (Links to an external site.) hur du kan välja hur många du vill få tillbaka i ditt svar. Du använder query param limit.
-Utöver att välja hur många bilder du vill få tillbaka i ditt svar, så stöder även webbtjänsten att konfigurera bläddrandet från en sida till en annan. Detta är också dokumenterat via query param page.
-
-När ni först börjar använda webbtjänsten så lär ni märka att det verkar som att ni får tillbaks “random bilder” även fast ni bläddrar tillbaka till en sida ni redan besökt. Detta är eftersom ni har glömt att sätta order som query param. Läs om detta på https://docs.thecatapi.com/pagination#pagination--ordering (Links to an external site.). Ni ska använda order för att få “förutsägbart bläddrande”. Ni ska använda asc som värde för order. Detta betyder att svaren kommer i “stigande” ordning.
-
 Projektet ska vara uppsatt med Node, NPM och Snowpack som vi har gått igenom. Detta innebär att ni ska ha kört npm init och att ni har installerat Snowpack med NPM. När jag laddar ner ert projekt lokalt så ska jag kunna skriva npm run build för att titta på projektet (alltså det som dyker upp i katalogen build).
 
 Inget krav på “optimering” av bygg-steget build, men en rekommendation är att använda det “inbyggda” stödet som vi lärde oss om i veckan.
-
 
 För att uppnå Väl Godkänt är kraven (utöver ovan nämnda krav för Godkänt):
 
