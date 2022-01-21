@@ -1,0 +1,30 @@
+För att uppnå Godkänt är kraven att:
+
+Utöver dessa två knappar så ska en lista av 12 bilder på katter synas direkt, som har hämtats från URL:en som är beskriven ovan. Det är dokumenterat på https://docs.thecatapi.com/pagination (Links to an external site.) hur du kan välja hur många du vill få tillbaka i ditt svar. Du använder query param limit.
+Utöver att välja hur många bilder du vill få tillbaka i ditt svar, så stöder även webbtjänsten att konfigurera bläddrandet från en sida till en annan. Detta är också dokumenterat via query param page.
+
+När ni först börjar använda webbtjänsten så lär ni märka att det verkar som att ni får tillbaks “random bilder” även fast ni bläddrar tillbaka till en sida ni redan besökt. Detta är eftersom ni har glömt att sätta order som query param. Läs om detta på https://docs.thecatapi.com/pagination#pagination--ordering (Links to an external site.). Ni ska använda order för att få “förutsägbart bläddrande”. Ni ska använda asc som värde för order. Detta betyder att svaren kommer i “stigande” ordning.
+
+Projektet ska vara uppsatt med Node, NPM och Snowpack som vi har gått igenom. Detta innebär att ni ska ha kört npm init och att ni har installerat Snowpack med NPM. När jag laddar ner ert projekt lokalt så ska jag kunna skriva npm run build för att titta på projektet (alltså det som dyker upp i katalogen build).
+
+Inget krav på “optimering” av bygg-steget build, men en rekommendation är att använda det “inbyggda” stödet som vi lärde oss om i veckan.
+
+
+För att uppnå Väl Godkänt är kraven (utöver ovan nämnda krav för Godkänt):
+
+Om användaren är offline när ett anrop har gjorts till webbtjänsten så ska programmet hantera detta. Exempelvis “Something went wrong while fetching data from the server”.
+
+När ett anrop till webbtjänsten är “in progress” så vill vi visa detta på något sätt. Exempelvis “Loading…” eller en “spinner ikon” är vanliga lösningar här. När anropet är färdigt så kommer denna text att försvinna och ersättas med antingen platserna som returnerats, eller felmeddelandet beskrivet ovan (om användaren är offline). 
+
+Under tiden ett anrop är pågående så ska även knapparna “Previous” och “Next” vara disabled.
+
+Bläddrande från en sida till en annan medan användaren är offline är OK. Då ska “Showing page <PAGE>” uppdateras och ett anrop ska ske varje gång användaren klickar på “Previous” eller “Next”. Tanken är att hemsidan ska fortsätta “försöka” hämta en ny sida i hopp om att hen får internet snart, i takt med att hen bläddrar.
+
+Övriga rekommendationer
+
+Lägg gärna till en .gitignore som innehåller node_modules och build. 
+Lägg gärna till en README så att andra som tittar på er lösning kan installera projektet lokalt.
+Lägg gärna upp projektet på Netlify. Vi lärde oss nyligen att det inte är särskilt svårt att knyta ihop Node/NPM med en sådan tjänst.
+Försök bygga lösningen responsivt och accessible, så att den fungerar för så många användare som möjligt. Detta inkluderar device viewports och rem som font-size.
+
+Min lösning för kan testas på https://cme-kunskapskontroll-5.netlify.app/ (Links to an external site.).

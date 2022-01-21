@@ -1,0 +1,24 @@
+.cat {
+max-width: 7rem;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+header,
+footer {
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+footer {
+    display: flex;
+    justify-content: center
+    
+}

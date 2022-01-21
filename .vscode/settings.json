@@ -1,0 +1,7 @@
+{
+        "workbench.editor.wrapTabs": true,
+        "editor.wordWrap": "on",  
+        "diffEditor.wordWrap": "inherit",
+        "editor.scrollbar.horizontal": "hidden",   ​
+        "editor.accessibilitySupport": "off"
+   ​}
