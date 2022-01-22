@@ -1,12 +1,21 @@
+body {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+}
 .cat {
-max-width: 7rem;
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.25rem;
 }
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
-    padding: 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
     column-gap: 0.5rem;
     row-gap: 0.5rem;
 }
@@ -15,10 +24,18 @@ footer {
     text-align: center;
 }
 h1 {
-    margin: 0;
+    margin: 0.5rem 0 0 0;
+}
+p {
+    margin: 0.5rem 0 0.5rem 0;
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 footer {
     display: flex;
-    justify-content: center
-    
+    justify-content: center;
+}
+button {
+    box-shadow: black;
+    background-color: inherit;
 }
