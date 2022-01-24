@@ -1,0 +1,25 @@
+body {
+  padding-left: 15%;
+  padding-right: 15%;
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+} .cat {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.25rem;
+} main {
+  margin: 0.5rem;
+} h1 {
+  margin: 0.5rem 0 0 0;
+} p {
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: bolder;
+  font-size: 1.5rem;
+} button {
+  box-shadow: black;
+  background-color: inherit;
+} .loading {
+  max-width: 50%;
+}
