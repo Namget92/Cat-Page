@@ -1,12 +1,6 @@
-import { main, pageNumber, h2, section } from "./index";
-
-function disableOrNot() {
-  if (pageNumber === 0) {
-    document.querySelector(".previous").disabled = true;
-  } else {
-    document.querySelector(".previous").disabled = false;
-  }
-}
+const main = document.querySelector("main");
+const section = document.querySelector("section");
+const h2 = document.querySelector("h2");
 
 function removeCats() {
   main.textContent = "";
@@ -29,4 +23,4 @@ function removeLoading() {
   section.textContent = "";
 }
 
-export { disableOrNot, removeCats, removeLoading, loading };
+export { removeCats, removeLoading, loading, main, section, h2 };

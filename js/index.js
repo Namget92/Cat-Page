@@ -1,13 +1,18 @@
-import { disableOrNot, removeCats, removeLoading, loading } from "./functions";
+import { removeCats, removeLoading, loading, main, section, h2 } from "./functions";
 
 const next = document.querySelector(".next");
 const previous = document.querySelector(".previous");
-const main = document.querySelector("main");
-const section = document.querySelector("section");
 const p = document.querySelector(".p");
-const h2 = document.querySelector("h2");
 let pageNumber = 0;
 p.textContent = `Page: ${pageNumber}`;
+
+function disableOrNot() {
+  if (pageNumber === 0) {
+    document.querySelector(".previous").disabled = true;
+  } else {
+    document.querySelector(".previous").disabled = false;
+  }
+}
 
 next.addEventListener("click", () => {
   pageNumber++;
@@ -24,17 +29,13 @@ previous.addEventListener("click", () => {
   } else {
   pageNumber--;
   p.textContent = `Page: ${pageNumber}`;
+  document.querySelector(".previous").disabled = true;
+  document.querySelector(".next").disabled = true;
   removeCats();
   loading();
   getNewCats();
 }
 });
-
-let i = 0;
-if (i === 0) {
-  i++;
-  getNewCats();
-}
 
 async function getNewCats() {
   try {
@@ -74,5 +75,7 @@ async function getNewCats() {
     removeLoading();
   }
 }
+
+getNewCats();
 
 export { main, pageNumber, h2, section };
