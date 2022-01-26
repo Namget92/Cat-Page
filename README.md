@@ -28,4 +28,4 @@ npm start
 To build tha app for production, run:
 
 ```
-npm build
+npm run build
